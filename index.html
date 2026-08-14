@@ -5,223 +5,126 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pratyusha Bodala | Portfolio</title>
   <style>
-    :root {
-      --bg: #0a0c10;
-      --panel: #121821;
-      --text: #edf3f8;
-      --muted: #b5bec9;
-      --accent: #66e0c2;
-      --accent-2: #90b7ff;
-      --line: rgba(255,255,255,0.08);
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: Arial, sans-serif;
+      background: #0a0c10;
+      color: #edf3f8;
       line-height: 1.6;
     }
-
     .container {
-      width: min(1100px, 92%);
+      width: 90%;
+      max-width: 1100px;
       margin: 0 auto;
     }
-
     header {
-      padding: 30px 0 10px;
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 20px 0;
     }
-
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+    }
+    .brand {
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+    .nav-links {
+      display: flex;
       gap: 20px;
       flex-wrap: wrap;
     }
-
-    .brand {
-      font-size: 1.3rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 22px;
-      flex-wrap: wrap;
-    }
-
     .nav-links a {
-      color: var(--muted);
+      color: #cfd8e3;
       text-decoration: none;
-      font-size: 0.95rem;
     }
-
-    .nav-links a:hover {
-      color: var(--text);
-    }
-
     .hero {
-      padding: 90px 0 60px;
+      padding: 80px 0 50px;
     }
-
     .hero-inner {
       display: grid;
-      grid-template-columns: 1.4fr 0.8fr;
-      gap: 40px;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 30px;
       align-items: center;
     }
-
-    .eyebrow {
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.78rem;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
     h1 {
-      font-size: clamp(2.5rem, 5vw, 4.2rem);
-      line-height: 1.05;
-      margin: 0 0 18px;
+      font-size: 3rem;
+      margin: 0 0 20px;
+      line-height: 1.1;
     }
-
-    .hero p {
-      color: var(--muted);
-      font-size: 1.08rem;
-      max-width: 650px;
+    p {
+      color: #d0d7df;
+      font-size: 1.05rem;
     }
-
-    .cta-row {
+    .btn-row {
+      margin-top: 24px;
       display: flex;
+      gap: 14px;
       flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 28px;
     }
-
     .btn {
       display: inline-block;
-      padding: 14px 22px;
+      padding: 12px 18px;
       border-radius: 999px;
       text-decoration: none;
-      font-weight: 700;
-      transition: 0.2s ease;
+      font-weight: bold;
     }
-
     .btn-primary {
-      background: var(--accent);
+      background: #66e0c2;
       color: #062d26;
     }
-
     .btn-secondary {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--line);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: white;
     }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
-    .profile-box {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 22px;
+    .profile {
+      background: #121821;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
       min-height: 260px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--text);
-      text-align: center;
+      font-size: 3rem;
+      font-weight: bold;
+      color: #0a0c10;
+      background: linear-gradient(135deg, #66e0c2, #90b7ff);
     }
-
-    .profile-circle {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.6rem;
-      font-weight: 700;
-      color: #061014;
-      box-shadow: 0 18px 40px rgba(102, 224, 194, 0.25);
-    }
-
     section {
-      padding: 60px 0;
+      padding: 40px 0;
     }
-
     h2 {
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      margin-bottom: 18px;
+      margin-bottom: 16px;
+      font-size: 2rem;
     }
-
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 30px;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 20px;
     }
-
     .card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 24px;
+      background: #121821;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 22px;
     }
-
     .card h3 {
       margin-top: 0;
-      margin-bottom: 12px;
-      font-size: 1.2rem;
+      margin-bottom: 10px;
     }
-
     .card p, .card li {
-      color: var(--muted);
+      color: #d0d7df;
     }
-
-    ul {
-      margin: 0;
-      padding-left: 18px;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .tag {
-      background: rgba(144, 183, 255, 0.08);
-      border: 1px solid rgba(144, 183, 255, 0.2);
-      color: var(--text);
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 0.92rem;
-    }
-
     footer {
-      border-top: 1px solid var(--line);
+      border-top: 1px solid rgba(255,255,255,0.08);
       padding: 30px 0 60px;
-      color: var(--muted);
       text-align: center;
+      color: #b8c0ca;
     }
-
     @media (max-width: 800px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .grid {
+      .hero-inner, .grid {
         grid-template-columns: 1fr;
       }
     }
@@ -236,7 +139,6 @@
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -247,33 +149,30 @@
     <section class="hero">
       <div class="container hero-inner">
         <div>
-          <div class="eyebrow">Senior Python Developer</div>
+          <div style="color:#66e0c2; font-weight:bold; letter-spacing:0.12em; text-transform:uppercase; font-size:0.8rem;">
+            Senior Python Developer
+          </div>
           <h1>Building reliable software and impactful solutions.</h1>
           <p>
-            I am a software developer focused on Python, backend systems, automation,
-            and scalable application development. I enjoy solving real-world problems
-            with clean architecture, efficient code, and strong business logic.
+            I am a software developer focused on Python, backend systems,
+            automation, and scalable application development.
           </p>
-
-          <div class="cta-row">
+          <div class="btn-row">
             <a class="btn btn-primary" href="#contact">Contact Me</a>
             <a class="btn btn-secondary" href="#projects">View Projects</a>
           </div>
         </div>
-
-        <div class="profile-box">
-          <div class="profile-circle">PB</div>
-        </div>
+        <div class="profile">PB</div>
       </div>
     </section>
 
     <section id="about">
       <div class="container">
         <h2>About Me</h2>
-        <p style="color: var(--muted); font-size: 1.04rem;">
-          I bring hands-on experience in software development, API design, data processing,
-          and automation workflows. I enjoy building practical tools that improve performance,
-          reduce manual work, and support business operations efficiently.
+        <p>
+          I have experience in Python development, backend systems, data processing,
+          and automation. I enjoy solving real-world problems with scalable architecture
+          and clean, maintainable code.
         </p>
       </div>
     </section>
@@ -281,19 +180,19 @@
     <section id="skills">
       <div class="container">
         <h2>Skills</h2>
-        <div class="skills">
-          <span class="tag">Python</span>
-          <span class="tag">Django</span>
-          <span class="tag">Flask</span>
-          <span class="tag">REST APIs</span>
-          <span class="tag">SQL</span>
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">Automation</span>
-          <span class="tag">Data Processing</span>
-          <span class="tag">Git</span>
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
+        <div class="grid">
+          <div class="card">
+            <h3>Languages</h3>
+            <p>Python, SQL, HTML, CSS, JavaScript</p>
+          </div>
+          <div class="card">
+            <h3>Frameworks</h3>
+            <p>Django, Flask, REST APIs</p>
+          </div>
+          <div class="card">
+            <h3>Tools</h3>
+            <p>Git, PostgreSQL, Automation, Backend Systems</p>
+          </div>
         </div>
       </div>
     </section>
@@ -304,39 +203,15 @@
         <div class="grid">
           <div class="card">
             <h3>Portfolio Website</h3>
-            <p>Created a personal portfolio website to showcase technical skills, experience, and project work.</p>
+            <p>Created a clean portfolio site to showcase technical skills and experience.</p>
           </div>
-
           <div class="card">
             <h3>Automation Scripts</h3>
-            <p>Built logic to streamline repetitive workflows, improve processing speed, and reduce manual effort.</p>
+            <p>Built systems to reduce repetitive work and improve business efficiency.</p>
           </div>
-
           <div class="card">
             <h3>Backend Applications</h3>
-            <p>Developed scalable backend systems for business operations, data handling, and application logic.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="container">
-        <h2>Experience</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Python Developer</h3>
-            <p>Designed and implemented backend and automation solutions using Python-based tools and frameworks.</p>
-          </div>
-
-          <div class="card">
-            <h3>System Integration</h3>
-            <p>Worked on connecting workflows, data pipelines, and application components for smoother operations.</p>
-          </div>
-
-          <div class="card">
-            <h3>Problem Solving</h3>
-            <p>Focused on building reliable solutions that improve performance, maintainability, and user experience.</p>
+            <p>Developed robust solutions for application logic and data processing.</p>
           </div>
         </div>
       </div>
@@ -347,8 +222,8 @@
         <h2>Contact</h2>
         <div class="card">
           <p>Email: pratyushabodala@gmail.com</p>
-          <p>LinkedIn: linkedin.com/in/yourprofile</p>
           <p>GitHub: github.com/PratyushaBodala</p>
+          <p>LinkedIn: linkedin.com/in/yourprofile</p>
         </div>
       </div>
     </section>
