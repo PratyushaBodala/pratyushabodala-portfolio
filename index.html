@@ -6,35 +6,50 @@
   <title>Pratyusha Bodala | Portfolio</title>
   <style>
     :root{
-      --bg: #0d1117;
-      --bg-2: #111827;
-      --panel: #121a22;
-      --panel-2: #182533;
-      --text: #f4f5f7;
-      --muted: #c0c8d2;
-      --soft: #9aa8b6;
+      --bg: #0b1016;
+      --bg-2: #101923;
+      --panel: #121c25;
+      --panel-2: #162531;
+      --panel-3: #0f1720;
+      --text: #eef3f8;
+      --muted: #bac4cf;
+      --soft: #8ea0b2;
       --line: rgba(255,255,255,0.08);
-      --accent: #9ad9cb;
-      --accent-2: #84a8ff;
-      --chip: rgba(154,217,203,0.08);
-      --chip-border: rgba(154,217,203,0.25);
+      --accent: #9ae2d0;
+      --accent-2: #8db5ff;
+      --tag-bg: rgba(154,226,208,0.08);
+      --tag-border: rgba(154,226,208,0.25);
+      --shadow: rgba(0,0,0,0.25);
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
       color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
     }
 
-    a { color: inherit; text-decoration: none; }
-    h1, h2, h3, h4, p { margin-top: 0; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    p, li {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    h1, h2, h3, h4 {
+      margin: 0 0 14px;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
 
     .container {
-      width: min(1160px, 92%);
+      width: min(1200px, 92%);
       margin: 0 auto;
     }
 
@@ -42,115 +57,130 @@
       position: sticky;
       top: 0;
       z-index: 10;
+      background: rgba(11,16,22,0.9);
       backdrop-filter: blur(10px);
-      background: rgba(13, 17, 23, 0.9);
       border-bottom: 1px solid var(--line);
     }
 
     nav {
+      min-height: 68px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      min-height: 64px;
-      gap: 20px;
+      gap: 18px;
       flex-wrap: wrap;
     }
 
     .brand {
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       font-weight: 700;
       letter-spacing: 0.02em;
     }
 
     .nav-links {
       display: flex;
-      gap: 28px;
+      gap: 20px;
       flex-wrap: wrap;
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
     }
 
     .nav-links a {
       color: var(--muted);
-      transition: color 0.2s ease;
     }
 
-    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .topbar {
+      padding: 34px 0 18px;
+    }
 
     .hero {
-      padding: 72px 0 40px;
+      padding: 48px 0 24px;
     }
 
-    .hero-block {
+    .hero-grid {
       display: grid;
-      grid-template-columns: 1.5fr 0.7fr;
-      gap: 34px;
+      grid-template-columns: 1.7fr 0.9fr;
+      gap: 40px;
       align-items: center;
     }
 
     .eyebrow {
       color: var(--accent);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
+      font-size: 0.76rem;
       text-transform: uppercase;
-      margin-bottom: 14px;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      margin-bottom: 18px;
     }
 
     h1 {
-      font-size: clamp(2.4rem, 5vw, 4.2rem);
-      line-height: 1.06;
-      letter-spacing: -0.04em;
+      font-size: clamp(2.4rem, 5vw, 4.1rem);
       margin-bottom: 18px;
+      max-width: 760px;
     }
 
     .hero-copy p {
       color: var(--muted);
-      font-size: 1.06rem;
-      max-width: 760px;
+      font-size: 1.08rem;
+      max-width: 820px;
+      margin-bottom: 26px;
+    }
+
+    .mini-badge {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(154,226,208,0.08);
+      border: 1px solid var(--tag-border);
+      color: var(--text);
+      font-size: 0.8rem;
+      margin-top: 8px;
+      margin-right: 8px;
     }
 
     .stats {
       display: grid;
       grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 18px;
-      margin-top: 28px;
+      gap: 16px;
+      margin-top: 12px;
     }
 
     .stat {
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: 14px;
-      padding: 18px 16px;
+      padding: 16px 18px;
     }
 
     .stat strong {
       display: block;
-      font-size: 1.8rem;
+      font-size: 2rem;
       line-height: 1.1;
       color: var(--text);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .stat span {
       color: var(--soft);
-      font-size: 0.9rem;
+      font-size: 0.82rem;
     }
 
-    .mini-card {
-      background: linear-gradient(135deg, var(--panel), var(--panel-2));
+    .profile-card {
+      background: linear-gradient(180deg, var(--panel), var(--panel-2));
       border: 1px solid var(--line);
       border-radius: 18px;
-      padding: 22px;
       min-height: 280px;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+      box-shadow: 0 20px 60px var(--shadow);
     }
 
-    .mini-avatar {
+    .avatar {
       width: 150px;
       height: 150px;
       border-radius: 50%;
@@ -158,42 +188,40 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 3rem;
+      color: #0b1116;
+      font-size: 2.8rem;
       font-weight: 700;
-      color: #0a0d12;
     }
 
     section {
-      padding: 42px 0;
+      padding: 48px 0;
     }
 
     .section-kicker {
       color: var(--accent);
-      font-size: 0.78rem;
+      font-size: 0.74rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.1;
-      margin-bottom: 14px;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      margin-bottom: 16px;
     }
 
-    .intro-text {
+    .intro {
       color: var(--muted);
       font-size: 1.04rem;
-      max-width: 900px;
+      max-width: 980px;
     }
 
     .work-grid,
-    .exp-grid,
     .stack-grid,
     .edu-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 22px;
       margin-top: 22px;
     }
@@ -203,66 +231,67 @@
       border: 1px solid var(--line);
       border-radius: 16px;
       padding: 22px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.09);
     }
 
     .card small {
+      display: block;
       color: var(--accent);
-      letter-spacing: 0.08em;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       font-weight: 700;
+      margin-bottom: 10px;
     }
 
     .card h3 {
-      margin: 10px 0 12px;
-      font-size: 1.5rem;
-      line-height: 1.2;
+      font-size: 1.55rem;
+      margin-bottom: 12px;
     }
 
-    .card p, .card li {
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .meta-tags {
+    .tag-row {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       margin-top: 12px;
+      margin-bottom: 10px;
     }
 
     .tag {
       display: inline-block;
-      background: var(--chip);
-      border: 1px solid var(--chip-border);
-      color: var(--text);
-      padding: 7px 10px;
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
       border-radius: 999px;
-      font-size: 0.78rem;
+      color: var(--text);
+      padding: 6px 10px;
+      font-size: 0.74rem;
     }
 
-    .problem, .approach, .outcome {
-      margin-top: 14px;
-    }
-
-    .problem strong, .approach strong, .outcome strong {
+    .label {
       display: block;
+      margin-top: 12px;
       margin-bottom: 4px;
       color: var(--text);
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
+      font-size: 0.74rem;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .card p {
+      color: var(--muted);
     }
 
     .timeline {
       display: grid;
-      gap: 20px;
+      gap: 18px;
       margin-top: 24px;
     }
 
     .timeline-item {
       display: grid;
       grid-template-columns: 180px 1fr;
-      gap: 22px;
+      gap: 24px;
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: 16px;
@@ -271,18 +300,20 @@
 
     .time {
       color: var(--soft);
-      font-size: 0.95rem;
+      font-size: 0.96rem;
       line-height: 1.8;
+      padding-top: 3px;
     }
 
     .timeline-item h3 {
-      margin: 0 0 6px;
-      font-size: 1.4rem;
+      font-size: 1.45rem;
+      margin-bottom: 6px;
     }
 
-    .timeline-item .role {
+    .role {
       color: var(--muted);
       margin-bottom: 10px;
+      font-size: 0.98rem;
     }
 
     .timeline-item ul {
@@ -296,7 +327,7 @@
     }
 
     .stack-grid h3 {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       margin-bottom: 10px;
     }
 
@@ -305,6 +336,10 @@
       border: 1px solid var(--line);
       border-radius: 16px;
       padding: 22px;
+    }
+
+    .contact-box p {
+      margin-bottom: 10px;
       color: var(--muted);
     }
 
@@ -314,17 +349,15 @@
     }
 
     footer {
+      border-top: 1px solid var(--line);
       padding: 30px 0 60px;
       color: var(--muted);
       text-align: center;
-      border-top: 1px solid var(--line);
-      margin-top: 30px;
     }
 
     @media (max-width: 900px) {
-      .hero-block,
+      .hero-grid,
       .work-grid,
-      .exp-grid,
       .stack-grid,
       .edu-grid {
         grid-template-columns: 1fr;
@@ -359,14 +392,14 @@
 
   <main>
     <section class="hero">
-      <div class="container hero-block">
+      <div class="container hero-grid">
         <div class="hero-copy">
           <div class="eyebrow">Open to senior full-stack engineering roles</div>
+
           <h1>I turn slow, manual, or fragile processes into systems that hold.</h1>
+
           <p>
-            Pratyusha Bodala — Senior Full-Stack Python Engineer. Django, FastAPI and PostgreSQL on the backend;
-            React and HTMX on the front; production on AWS with Docker and Terraform. I own projects end to end:
-            requirements, implementation, testing, and production support.
+            Pratyusha Bodala — Senior Full-Stack Python Engineer. Django, FastAPI and PostgreSQL on the backend; React and HTMX on the front; production on AWS with Docker and Terraform. I own projects end to end: requirements, implementation, testing, and production support.
           </p>
 
           <div class="stats">
@@ -376,7 +409,7 @@
             </div>
             <div class="stat">
               <strong>4</strong>
-              <span>Apps shipped</span>
+              <span>Apps</span>
             </div>
             <div class="stat">
               <strong>99.9%</strong>
@@ -385,19 +418,18 @@
           </div>
         </div>
 
-        <div class="mini-card">
-          <div class="mini-avatar">PB</div>
+        <div class="profile-card">
+          <div class="avatar">PB</div>
         </div>
       </div>
     </section>
 
     <section id="about">
       <div class="container">
-        <div class="section-kicker">Overview</div>
-        <h2>Senior full-stack engineer focused on resilient systems, automation, and measurable business impact.</h2>
-        <p class="intro-text">
-          I build data-heavy applications, internal platforms, and service integrations that remove manual work and improve operational reliability.
-          My work spans backend architecture, API design, async processing, cloud deployment, and front-end experiences that keep systems fast and usable.
+        <div class="section-kicker">About</div>
+        <h2>Senior full-stack engineer focused on resilient systems and measurable business impact.</h2>
+        <p class="intro">
+          Pratyusha Bodala — Senior Full-Stack Python Engineer. Django, FastAPI and PostgreSQL on the backend; React and HTMX on the front; production on AWS with Docker and Terraform. I own projects end to end: requirements, implementation, testing, and production support.
         </p>
       </div>
     </section>
@@ -411,70 +443,100 @@
           <article class="card">
             <small>Data &amp; modeling</small>
             <h3>Financial Risk-Analytics Engine</h3>
-            <div class="meta-tags">
+            <div class="tag-row">
               <span class="tag">Python</span>
               <span class="tag">Django</span>
               <span class="tag">PostgreSQL</span>
               <span class="tag">Pandas</span>
             </div>
-            <div class="problem"><strong>Problem</strong><p>At-risk inventory had no quantified liability number.</p></div>
-            <div class="approach"><strong>Approach</strong><p>Built a weighted-average liability model and validated it with operations stakeholders.</p></div>
-            <div class="outcome"><strong>Outcome</strong><p>One source of truth for at-risk inventory value.</p></div>
+
+            <span class="label">Problem</span>
+            <p>At-risk international supply-chain inventory had no quantified liability figure, so exposure was argued from spreadsheets.</p>
+
+            <span class="label">Approach</span>
+            <p>Built a weighted-average liability model inside the platform, then worked with overseas operations stakeholders to validate it against real data.</p>
+
+            <span class="label">Outcome</span>
+            <p>A single source of truth for at-risk inventory value, validated by the teams who own the inventory.</p>
           </article>
 
           <article class="card">
             <small>Performance</small>
             <h3>Streaming Batch-Reporting Re-architecture</h3>
-            <div class="meta-tags">
+            <div class="tag-row">
               <span class="tag">Python</span>
               <span class="tag">Celery</span>
               <span class="tag">PostgreSQL</span>
               <span class="tag">AWS</span>
             </div>
-            <div class="problem"><strong>Problem</strong><p>Memory-heavy batch reporting timed out repeatedly.</p></div>
-            <div class="approach"><strong>Approach</strong><p>Replaced it with a config-driven streaming engine.</p></div>
-            <div class="outcome"><strong>Outcome</strong><p>Large reports complete instead of timing out.</p></div>
+
+            <span class="label">Problem</span>
+            <p>A memory-heavy batch reporting pipeline repeatedly timed out on large datasets.</p>
+
+            <span class="label">Approach</span>
+            <p>Replaced it with a config-driven streaming engine so report definitions became configuration rather than code.</p>
+
+            <span class="label">Outcome</span>
+            <p>Large reports complete instead of timing out, and new reports ship without a deploy.</p>
           </article>
 
           <article class="card">
             <small>AI platform</small>
             <h3>Enterprise AI Platform</h3>
-            <div class="meta-tags">
+            <div class="tag-row">
               <span class="tag">FastAPI</span>
               <span class="tag">React.js</span>
               <span class="tag">SvelteKit</span>
               <span class="tag">AWS Lambda</span>
             </div>
-            <div class="problem"><strong>Problem</strong><p>AI capability was fragmented across teams and services.</p></div>
-            <div class="approach"><strong>Approach</strong><p>Built four connected apps with async processing and secure SSO.</p></div>
-            <div class="outcome"><strong>Outcome</strong><p>One platform handling high-volume AI requests with 99.9% uptime.</p></div>
+
+            <span class="label">Problem</span>
+            <p>AI capability was scattered, with no shared surface for teams sending a high volume of requests.</p>
+
+            <span class="label">Approach</span>
+            <p>Built four connected applications on React.js/SvelteKit and Python FastAPI, with async processing on Lambda and SQS and SSO via OAuth2/OIDC.</p>
+
+            <span class="label">Outcome</span>
+            <p>One platform supporting a high volume of AI requests monthly, on a microservices architecture holding 99.9% uptime for priority services.</p>
           </article>
 
           <article class="card">
             <small>Data &amp; modeling</small>
             <h3>Celery-Based Async Ingestion Pipelines</h3>
-            <div class="meta-tags">
+            <div class="tag-row">
               <span class="tag">Celery</span>
               <span class="tag">Django</span>
               <span class="tag">HTMX</span>
               <span class="tag">Redis</span>
             </div>
-            <div class="problem"><strong>Problem</strong><p>Bulk imports failed opaquely and required hours of cleanup.</p></div>
-            <div class="approach"><strong>Approach</strong><p>Added async pipelines with live progress and per-row validation.</p></div>
-            <div class="outcome"><strong>Outcome</strong><p>Errors are caught earlier and manual cleanup drops significantly.</p></div>
+
+            <span class="label">Problem</span>
+            <p>Bulk data imports failed opaquely, leaving hours of manual cleanup after each run.</p>
+
+            <span class="label">Approach</span>
+            <p>Built async import pipelines in Celery with live progress tracking and per-row validation surfaced back to the user.</p>
+
+            <span class="label">Outcome</span>
+            <p>Import errors are caught per row at upload time, cutting manual cleanup.</p>
           </article>
 
           <article class="card">
             <small>Integrations</small>
             <h3>Legacy ERP Cost-Recovery Integration</h3>
-            <div class="meta-tags">
+            <div class="tag-row">
               <span class="tag">SOAP/XML</span>
               <span class="tag">Django</span>
               <span class="tag">Celery</span>
             </div>
-            <div class="problem"><strong>Problem</strong><p>Vendor cost recovery ran manually across ERP and platform.</p></div>
-            <div class="approach"><strong>Approach</strong><p>Modeled workflow as draft, review, post, complete with RBAC.</p></div>
-            <div class="outcome"><strong>Outcome</strong><p>Users manage their own workflow inside one system.</p></div>
+
+            <span class="label">Problem</span>
+            <p>Vendor cost recovery ran manually across a legacy ERP and the platform, step by step.</p>
+
+            <span class="label">Approach</span>
+            <p>Integrated the two systems over SOAP and modeled the workflow as draft, review, post, complete with scoped role-based access control.</p>
+
+            <span class="label">Outcome</span>
+            <p>The workflow runs inside one system, and users manage their own data without escalating to admins.</p>
           </article>
         </div>
       </div>
@@ -483,7 +545,7 @@
     <section id="experience">
       <div class="container">
         <div class="section-kicker">02 / Experience</div>
-        <h2>Where I’ve shipped</h2>
+        <h2>Where I've shipped</h2>
 
         <div class="timeline">
           <div class="timeline-item">
@@ -492,11 +554,13 @@
               <h3>Jazwares</h3>
               <div class="role">Sr. Software Developer, Full Stack · Plantation, FL</div>
               <ul>
-                <li>Built a weighted-average liability model to quantify at-risk international supply-chain inventory.</li>
-                <li>Rebuilt a memory-heavy batch reporting pipeline into a config-driven streaming engine.</li>
-                <li>Designed a saved-views and filtering feature with Django and HTMX with no page reloads.</li>
-                <li>Integrated a legacy ERP system over SOAP to automate vendor cost recovery.</li>
-                <li>Automated stakeholder email reports and added monitoring and alerting with AWS CloudWatch and Sentry.</li>
+                <li>Built a weighted-average liability model to quantify at-risk international supply-chain inventory, working with overseas operations stakeholders to validate it against real data.</li>
+                <li>Rebuilt a memory-heavy batch reporting pipeline as a config-driven streaming engine after repeated timeouts on large datasets.</li>
+                <li>Designed and shipped a saved-views and filtering feature using Django and HTMX with no page reloads; ranked the #2 engineering priority company-wide.</li>
+                <li>Integrated the platform with a legacy ERP system over SOAP, automating a manual vendor cost-recovery workflow (draft, review, post, complete).</li>
+                <li>Automated daily stakeholder email reports using Celery with timezone and holiday-aware scheduling, and added monitoring for job success, failure, and skip status.</li>
+                <li>Delivered a public marketing microsite using Django and a headless CMS (Kontent.ai), decoupling content updates from code deployments.</li>
+                <li>Added monitoring and alerting with AWS CloudWatch and Sentry; configured the Gunicorn production deployment.</li>
               </ul>
             </div>
           </div>
@@ -507,10 +571,12 @@
               <h3>Comcast</h3>
               <div class="role">Python Developer II, Full Stack · Philadelphia, PA</div>
               <ul>
-                <li>Built an enterprise AI platform with four connected applications across React.js and SvelteKit.</li>
-                <li>Structured AWS Lambda and SQS workflows for async data processing.</li>
-                <li>Implemented OAuth2 and OpenID Connect for secure single sign-on.</li>
-                <li>Managed infrastructure as code with Terraform across multicloud environments.</li>
+                <li>Built an enterprise AI platform (React.js/SvelteKit and Python FastAPI) with four connected applications supporting a high volume of AI requests monthly.</li>
+                <li>Built backend services on AWS Lambda and SQS for async data processing, improving responsiveness of the customer-facing service portal.</li>
+                <li>Worked with senior architects on a microservices architecture supporting independent scaling and 99.9% uptime for priority services.</li>
+                <li>Implemented OAuth2 and OpenID Connect for secure single sign-on across platforms.</li>
+                <li>Managed infrastructure as code with Terraform for consistent provisioning across dev, staging, and production, working across AWS, Azure, and GCP.</li>
+                <li>Built custom Django middleware for logging and request tracing, cutting debugging time by roughly 30%.</li>
               </ul>
             </div>
           </div>
@@ -521,9 +587,34 @@
               <h3>Key Bank</h3>
               <div class="role">Python Developer · Remote</div>
               <ul>
-                <li>Built RESTful APIs with Django REST Framework for third-party integrations.</li>
-                <li>Integrated ML models into the backend for real-time risk assessment.</li>
-                <li>Maintained PCI-DSS compliance with JWT auth, RBAC, and encryption at rest/in transit.</li>
+                <li>Built RESTful APIs with Django REST Framework connecting core banking systems with third-party financial partners.</li>
+                <li>Worked with the data science team to integrate ML models into the backend for real-time risk assessment on credit card applications.</li>
+                <li>Maintained PCI-DSS compliance with JWT authentication, RBAC, and encryption at rest and in transit.</li>
+                <li>Resolved Django ORM performance bottlenecks and added Redis caching for high-traffic periods.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="time">Aug 2022 – May 2024</div>
+            <div>
+              <h3>University of Dayton</h3>
+              <div class="role">Technical Support Analyst</div>
+              <ul>
+                <li>Automated repetitive support tasks with Python scripts (log parsing, health checks, file processing), reducing manual troubleshooting time by roughly 40%.</li>
+                <li>Built internal dashboards (Flask/Django) to track error trends.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="time">Jan 2021 – Jul 2022</div>
+            <div>
+              <h3>Aaseya IT Services</h3>
+              <div class="role">Python Developer</div>
+              <ul>
+                <li>Designed PostgreSQL schemas for high-volume transaction and user data.</li>
+                <li>Built REST APIs and custom CMS tooling in Django, and integrated Stripe and PayPal for global e-commerce payment processing.</li>
               </ul>
             </div>
           </div>
@@ -549,22 +640,27 @@
 
           <div class="card">
             <h3>Backend &amp; Frontend</h3>
-            <p>Django, Django REST Framework, FastAPI, React.js, HTMX, Bootstrap 5, Tailwind CSS</p>
+            <p>Django, Django REST Framework, FastAPI, OOP, Data Structures &amp; Algorithms, React.js, HTMX, Bootstrap 5, Tailwind CSS</p>
           </div>
 
           <div class="card">
             <h3>Cloud / DevOps</h3>
-            <p>AWS, GCP, Azure, Docker, Terraform, Kubernetes, GitHub Actions, Gunicorn</p>
+            <p>AWS (EC2, S3, RDS, Lambda, CloudWatch, IAM, CodeDeploy), GCP, Azure, Docker, Terraform, Kubernetes (EKS), GitHub Actions, Gunicorn</p>
           </div>
 
           <div class="card">
             <h3>Databases</h3>
-            <p>PostgreSQL, SQL Server, MongoDB, Redis, DynamoDB</p>
+            <p>PostgreSQL, SQL Server, MongoDB, Redis/Valkey, DynamoDB</p>
           </div>
 
           <div class="card">
             <h3>Security &amp; Integration</h3>
-            <p>OAuth 2.0, SAML SSO, OpenID Connect, JWT, RBAC, SOAP/XML, REST/GraphQL</p>
+            <p>OAuth 2.0, SAML SSO, OpenID Connect, JWT, RBAC, Content Security Policy, SOAP/XML Web Services, Gmail API, REST/GraphQL</p>
+          </div>
+
+          <div class="card">
+            <h3>Tools &amp; Testing</h3>
+            <p>Celery, Sentry, Pandas, openpyxl, xlsxwriter, Git/GitHub, Webpack, npm, Jira, Pytest, Jest, Playwright</p>
           </div>
         </div>
       </div>
@@ -599,6 +695,8 @@
         <div class="contact-box">
           <p><strong>Email:</strong> <a href="mailto:pratyupratyusha457@gmail.com">pratyupratyusha457@gmail.com</a></p>
           <p><strong>Phone:</strong> 937-993-4599</p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/PratyushaBodala">github.com/PratyushaBodala</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com">linkedin.com/in/yourprofile</a></p>
         </div>
       </div>
     </section>
